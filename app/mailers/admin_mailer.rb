@@ -3,6 +3,6 @@ class AdminMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-    mail(to: 'uwedr@suse.de', subject: 'Welcome to Betaman!')
+    mail(to: "beta-progams@lists.suse.com", subject: 'Welcome to Betaman!')
   end
 end

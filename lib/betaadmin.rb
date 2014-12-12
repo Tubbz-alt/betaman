@@ -202,8 +202,6 @@ class BetaAdmin
   
     s = page_csv.body
 
-    #s = File.read  '/suse/uwedr/SUSE_Linux_Enterprise_Server_12__(Authorized)_.csv'
-
     # Fix broken encoding
     s.encode!("ISO-8859-1", "utf-8", :invalid => :replace)
 
