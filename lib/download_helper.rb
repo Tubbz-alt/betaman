@@ -34,11 +34,13 @@ module DownloadHelper
               available_dls << p.user
             end
 
-            if !b.list.users.include? p.user
-              if p.user.employee?
-                int_missing_lists << p.user
-              else
-                ext_missing_lists << p.user
+            if !b.list.blank?
+              if !b.list.users.include? p.user
+                if p.user.employee?
+                  int_missing_lists << p.user
+                else
+                  ext_missing_lists << p.user
+                end
               end
             end
 
