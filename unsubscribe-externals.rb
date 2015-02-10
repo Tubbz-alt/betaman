@@ -4,7 +4,7 @@ require 'betaadmin'
 require 'download_helper'
 
 begin
-  puts "Unbscribing external users of Betas with downloads..."
+  puts "Unsubcribing external users of Betas with downloads..."
 
   betas_with_downloads = DownloadHelper.find_betas_with_downloads
   betas_with_downloads.each do |b|
@@ -19,7 +19,7 @@ begin
       n += 1
     end
     
-    #puts "    Sync external list to internal..."
-    #b[:beta].list.sync_to_intern
+    puts "    Sync external list to internal..."
+    b[:beta].list.sync_to_intern
   end
 end
